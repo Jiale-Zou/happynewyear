@@ -1,0 +1,195 @@
+*{ margin:0; padding:0;}
+ul{ list-style: none;}
+img{ display: block;}
+#page1{ width:100vw; height: 100vh; background: url(../img/Cover/Cover_bg.png) center; background-size: cover;}
+#page1 .page1-lantern{ width:154px; height: 114px; background:url(../img/Cover/lantern.png);
+  background-size: cover; margin: 0 auto;}
+#page1 .page1-frame{ width:700px; height: 150px; background:url(../img/Cover/frame.png);
+  background-size: cover; margin: 30px auto; line-height: 140px; text-align: center; color: OldLace; font-weight: bold;
+  font-size: 50px;}
+#page1 .page1-text{ width:300px; height:555px; background:url(../img/Cover/text.png); background-size: cover;
+  margin: 100px auto;}
+#page1 .page1-fireworks-up{ position: absolute; width:300px; height:450px; background:url(../img/Cover/fireworks-up.png);
+  background-size: cover; left: 5%; top: 500px; transform-origin: center bottom; opacity:0.6}
+#page1 .page1-fireworks-round1{ position: absolute; width:300px; height:300px; background:url(../img/Cover/fireworks-round.png);
+  background-size: cover; right: 7%; bottom: 800px; transform-origin: center;
+  animation: fireworks-round 2s ease-in-out infinite -1s;}
+#page1 .page1-fireworks-round1::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 228, 181, 0.1);
+  filter: blur(8px);
+  opacity: 0;
+  animation: halo-effect 2s ease-out infinite -1s;
+}
+#page1 .page1-fireworks-round2{ position: absolute; width:300px; height:300px; background:url(../img/Cover/fireworks-round.png);
+  background-size: cover; right: 20%; bottom: 500px; transform-origin: center;
+  animation: fireworks-round 2s ease-in-out infinite -1.5s;}
+#page1 .page1-fireworks-round2::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 228, 181, 0.1);
+  filter: blur(8px);
+  opacity: 0;
+  animation: halo-effect 2s ease-out infinite -1.5s;
+}
+#page1 .page1-bottom{ width:100vw; height:320px; background:url(../img/Cover/bottom.png) center bottom;
+  background-size: 100%; position: absolute; bottom: 0;}
+#page1 .page1-left{ position: absolute; width: 352px; height: 390px; background: url(../img/Cover/left.png);
+  background-size: cover; left: 5%; top: -195px; margin-left: -55px; transform-origin: center bottom;
+  animation: 2s ease-in-out infinite prun -1s;}
+#page1 .page1-right{
+  position: absolute; width: 335px; height: 370px; background: url(../img/Cover/right.png);
+  background-size: cover; right: 5%; top: -208px; margin-right: -40px;  transform-origin: center bottom;
+  animation: 2s ease-in-out infinite prun -1.5s;}
+
+@keyframes fireworks-round {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(0); /* 先不绽开 */
+  }
+  30% {
+    transform: scale(0.2);  /* 缓慢绽开 */
+  }
+  40% {
+    transform: scale(0.35);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  60% {
+    transform: scale(0.65);
+  }
+  70% {
+    transform: scale(0.8);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1); /* 轻微扩散后消失 */
+  }
+}
+@keyframes halo-effect {
+  0% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  70% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  80% {
+    opacity: 1;
+    width: 350px;
+    height: 350px;
+  }
+  85% {
+    opacity: 0.8;
+    width: 360px;
+    height: 360px;
+  }
+  100% {
+    opacity: 0;
+    width: 370px;
+    height: 370px;
+  }
+}
+
+#music{ width:100px; height:100px; background: url(../img/Cover/music_icon.png); background-size: cover;
+  position: absolute; right: 20px; top: 20px;}
+#music.run{ animation: 3s linear infinite mrun;}
+@keyframes prun {
+  0%{ transform: rotate(-2deg);}
+  50%{ transform: rotate(2deg);}
+  100%{ transform: rotate(-2deg);}
+}
+@keyframes mrun {
+  0%{ transform: rotate(0deg);}
+  100%{ transform: rotate(360deg)}
+}
+
+#page2{ width:100vw; height: 100vh; background: url(../img/Cover/Cover_bg.png) center; background-size: cover; display: none;}
+#page2 .page2-lantern{ width:154px; height: 114px; background:url(../img/Cover/lantern.png);
+  background-size: cover; margin: 0 auto;}
+#page2 .page2-bottom{ width:100vw; height:320px; background:url(../img/Cover/bottom.png) center bottom;
+  background-size: 100%; position: absolute; bottom: 0;}
+#page2 .page2-left{ position: absolute; width: 352px; height: 390px; background: url(../img/Cover/left.png);
+  background-size: cover; left: 5%; top: -195px; margin-left: -55px; transform-origin: center bottom;
+  animation: 2s ease-in-out infinite prun -1s;}
+#page2 .page2-right{
+  position: absolute; width: 335px; height: 370px; background: url(../img/Cover/right.png);
+  background-size: cover; right: 5%; top: -208px; margin-right: -40px;  transform-origin: center bottom;
+  animation: 2s ease-in-out infinite prun -1.5s;}
+
+#page3{ width:100vw; height: 100vh; background: url(../img/Card/Card_bg.png) center; background-size: cover;
+  opacity: 0; display: none}
+#page3.show {
+  transition: opacity 2s linear;
+  display: block;
+}
+#page3 .page3-text {
+  width: 420px; height: 300px; background-size: cover; background-color: rgba(251, 247, 234); border-radius: 10px;
+  text-align: center; position: absolute; top: 33%; left: 30%;
+}
+#page3 .page3-blessing {
+  margin: 50px auto;
+  font-size: 28px;
+  line-height: 1.8;
+  color: #333;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+#page3 .page3-highlight {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  margin: 45px auto;
+  font-family: 'Ma Shan Zheng', cursive;
+}
+#page3 .page3-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 24px;
+  background-color: #333;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+@media (max-width: 850px) {
+  #page3 {
+      width: 90%;
+      height: 400px;
+  }
+  .page3-blessing {
+      font-size: 22px;
+  }
+  .page3-highlight {
+      font-size: 39px;
+  }
+}
+
+
